@@ -4,7 +4,7 @@ from thepursuit.settings.base import *
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','13.126.226.206','thepursuit.tedxpesitbsc.com','tiusrupeht.ingeniushack.com']
+ALLOWED_HOSTS = ['thepursuit.ingeniushack.com']
 
 #ALLOWED_HOSTS += [os.environ['DJANGO_HOST_NAME']]
 

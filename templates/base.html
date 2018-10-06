@@ -11,7 +11,7 @@
     <title>{% block title %}User test{% endblock %}</title>
 </head>
 
-<body>
+<body id="particles-js">
 <nav class="navbar navbar-inverse" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -163,7 +163,7 @@
 })(jQuery);
 </script>
 
- <script>
+<script>
     $(function() {
         // window.scrollReveal = new scrollReveal();
         "use strict";
@@ -181,61 +181,58 @@
 
     });
 </script>
-            <script>
-              $("#showmodal").hide();
-              let started = false;
-            date = new Date();
-            var othdate = new Date("Sun Mar 25 2018 17:00:00 GMT+0530 (IST)");
-            if((othdate <= date) == true){
-                $('#actualbtn').prop('disabled', false);
-                $("#actualbtn").text("Start")
+<script>
+    $("#showmodal").hide();
+    let started = false;
+    date = new Date();
+    var othdate = new Date("Sun Mar 25 2018 17:00:00 GMT+0530 (IST)");
+    if((othdate <= date) == true) {
+        $('#actualbtn').prop('disabled', false);
+        $("#actualbtn").text("Start")
+        $('.startlink').unbind('click', false);
+    } else {
+        if (window.location.href== "/accounts/") {
+            window.location.href = '/';
+        }   
+        if (window.location.pathname== "/accounts/login/") {
 
-                $('.startlink').unbind('click', false);
-            }
-            else{
-                if (window.location.href== "/accounts/") {
-   window.location.href = '/';
-}
- if (window.location.pathname== "/accounts/login/") {
-
-   window.location.href = '/';
-}
- if (window.location.pathname== "/play/") {
-
-   window.location.href = '/';
-}
-if (window.location.pathname== "/accounts/register/") {
-
-   window.location.href = '/';
-}
-                $('#actualbtn').prop('disabled', true);
-                $('.startlink').bind('click', false);
-                $('.play').bind('click', false);
-                $('.leader').bind('click', false);
-                 $('.login').bind('click', false);
-                $('.logout').bind('click', false);
-                $("#actualbtn").text("Starting soon!");
-            }
-            function refreshAt(hours, minutes, seconds) {
-    var now = new Date();
-    var then = new Date();
-
-    if(now.getHours() > hours ||
-       (now.getHours() == hours && now.getMinutes() > minutes) ||
-        now.getHours() == hours && now.getMinutes() == minutes && now.getSeconds() >= seconds) {
-        then.setDate(now.getDate() + 1);
+            window.location.href = '/';
+        }
+        if (window.location.pathname== "/play/") {
+            window.location.href = '/';
+        }
+        if (window.location.pathname== "/accounts/register/") {
+            window.location.href = '/';
+        }
+        $('#actualbtn').prop('disabled', true);
+        $('.startlink').bind('click', false);
+        $('.play').bind('click', false);
+        $('.leader').bind('click', false);
+            $('.login').bind('click', false);
+        $('.logout').bind('click', false);
+        $("#actualbtn").text("Starting soon!");
     }
-    then.setHours(hours);
-    then.setMinutes(minutes);
-    then.setSeconds(seconds);
+    function refreshAt(hours, minutes, seconds) {
+        var now = new Date();
+        var then = new Date();
 
-    var timeout = (then.getTime() - now.getTime());
-    setTimeout(function() { window.location.reload(true); started = true }, timeout);
-}
-refreshAt(17,00,0);
-if(started)
-$("#showmodal").show();
-            </script>
+        if(now.getHours() > hours ||
+        (now.getHours() == hours && now.getMinutes() > minutes) ||
+            now.getHours() == hours && now.getMinutes() == minutes && now.getSeconds() >= seconds) {
+            then.setDate(now.getDate() + 1);
+        }
+        then.setHours(hours);
+        then.setMinutes(minutes);
+        then.setSeconds(seconds);
+
+        var timeout = (then.getTime() - now.getTime());
+        setTimeout(function() { window.location.reload(true); started = true }, timeout);
+    }
+    refreshAt(17,00,0);
+    if(started)
+        $("#showmodal").show();
+        
+</script>
 
 
 <!-- scripts for particle -->

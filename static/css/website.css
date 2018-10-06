@@ -1,6 +1,25 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@-webkit-keyframes bg-transitions{
+	0% {background-color: #0D0620;}
+	/*20% {background-color: #1C0C2B;}*/
+	40% {background-color: #041024;}
+	/*80% {background-color: #042418;}*/
+	100% {background-color: #050309;}
+}
+@keyframes bg-transitions{
+	0% {background-color: #0D0620;}
+	/*20% {background-color: #1C0C2B;}*/
+	40% {background-color: #041024;}
+	/*80% {background-color: #042418;}*/
+	100% {background-color: #050309;}
+}
+
 body {
-    background: url('/static/images/bg1.jpg') no-repeat center center fixed;
+    /* background: url('/static/images/bg1.jpg') no-repeat center center fixed; */
+    animation: bg-transitions 4s infinite alternate;
+    -moz-animation: bg-transitions 4s infinite alternate;
+    -webkit-animation: bg-transitions 4s infinite alternate;
+    
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
