@@ -62,14 +62,15 @@
 </div>
     </div>
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-101348891-3"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-67302990-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-      gtag('config', 'UA-101348891-3');
-    </script>
+  gtag('config', 'UA-67302990-4');
+</script>
 
 <script type="text/javascript">
   /*! jQuery v1.11.0 | (c) 2005, 2014 jQuery Foundation, Inc. | jquery.org/license */
@@ -175,7 +176,7 @@
 
         // Countdown
         $('.countdown').downCount({
-            date: '03/25/2018 17:00:00',
+            date: '10/09/2018 19:00:00',
             offset: +5.5
         });
 
@@ -185,7 +186,7 @@
     $("#showmodal").hide();
     let started = false;
     date = new Date();
-    var othdate = new Date("Sun Mar 25 2018 17:00:00 GMT+0530 (IST)");
+    var othdate = new Date("Tue Oct 09 2018 19:00:00 GMT+0530 (IST)");
     if((othdate <= date) == true) {
         $('#actualbtn').prop('disabled', false);
         $("#actualbtn").text("Start")
@@ -228,7 +229,7 @@
         var timeout = (then.getTime() - now.getTime());
         setTimeout(function() { window.location.reload(true); started = true }, timeout);
     }
-    refreshAt(17,00,0);
+    refreshAt(19,00,0);
     if(started)
         $("#showmodal").show();
         
