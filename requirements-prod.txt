@@ -1,4 +1,4 @@
-Django==1.11.23
+Django==1.11.28
 django-bootstrap3==7.0.1
 django-registration==2.1.2
 gunicorn==19.6.0
